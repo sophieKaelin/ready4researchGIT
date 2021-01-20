@@ -1,0 +1,36 @@
+# 1. Setup Git
+
+| *What you will Learn* |
+|---|
+|<ul><li> Download Git to your device</li> <li>Creating a Bitbucket account</li></ul>|
+
+Firstly you need to setup your enviornment so you are ready to use Git and have the project accessible on your device.
+
+## 1.1 Make a Bitbucket account
+
+If you haven't already, make yourself a [Bitbucket](https://bitbucket.org/) account.
+
+## 1.2 Installing Git
+
+Luckily for you, we are working on Raspberry Pi's, and Git is installed by default in Raspbian. However, if you are using different operating systems (like Mac OS, Windows or Linux) you need to install Git yourself.
+
+If you are interested in downloading it on your own device for use outside of this workshop, instructions on how to do so can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+*NOTE: This is not vital to this workshop, more just information for those interested*
+
+## 1.3 Telling Git who you are
+
+This is an important step so that when you are collaborating on a project, group members know who made what changes. For this step, you must make sure the details you enter are the same as the details you gave when creating your Bitbucket account.
+
+1. Open a terminal window either by clicking on the icon or pressing `Ctrl + Alt + T`
+2. Next you want to tell Git your name and email
+
+   `git config --global user.name "Alfredo Linguini"`  
+   `git config --global user.email "gusteaus-bigchef@gmail.com"`  
+   <!--TODO: What about editors? Is this important with pi-->
+   <!--`git config --global core.editor nano`-->
+   
+   
+
+***[Next -> 2. Creating a Copy of the Project]()***
+
