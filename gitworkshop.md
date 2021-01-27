@@ -45,7 +45,7 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 <!--Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
 <!--Reccomend group work here so no early conflicts emerge-->
 
-[5. Exploring History ]()
+[5. Exploring History]()
 
 [6. Conflicts] ()
 <!--Force a conflict (TODO: need an idea here)-->
@@ -55,6 +55,10 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 
 [8. Other useful Git Commands]()
 <!--Ignoring Things in here-->
+
+[9. Summary]()
+<!--Summarise which elements will be most important for the remainder of this project-->
+<!--i.e. steps 4 to 7-->
 
 ## Extra Lessons
 <!--For those interested in extending themselves?-->
