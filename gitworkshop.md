@@ -37,18 +37,15 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 <!--Maybe add forking here, flows better to fork the repo, then get them to share-->
 <!--Only one person to do this step, but maybe give another basic repo to pracice forking-->
 
-[2. Collaboration and Sharing] ()
+[3. Collaboration and Sharing] ()
 <!--e.g. types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
 
-[2. Cloning a Repository]()
-<!--Include remotes in this-->
+[4. Commiting and Pushing]()
 
-<!--Maybe add pushing here. Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
+<!--Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
+<!--Reccomend group work here so no early conflicts emerge-->
 
-[3. Tracking Changes ]()
-
-[4. Exploring History]()
-<!--Can probably merge this with tracking changes-->
+[3. Tracking Changes and Exploring History ]()
 
 [5. Conflicts] ()
 <!--Force a conflict (TODO: need an idea here)-->
