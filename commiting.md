@@ -9,10 +9,12 @@
 When, for instance, you are playing a computer game and you make some positive progress, your instinct would be to save the game so that if you make a mistake later on, you can revert back to your previous saved checkpoint. Making a `commit` is a similar concept. Whenever you have made some positive progress with your source code, you will want to make a `commit` which will save/record a snapshot of your source code at that point in time on your local device. That way, if you make a mistake later on, you can revert back to that commit. Needless to say, you should only be making commits of code that works.
 
 ### Tracking Changes
-On big projects you are going to have a very large number of commits.
-<!--Status-->
-<!--Log-->
-<!--Only reflects last pull and remote commits-->
+On big projects you are going to have a very large number of commits, from lots of different people on your team. Git provides helpful ways of tracking your commits (changes) through `log`'s. Test out the following commands to have a look at the `status` and commit history of the mini console project:
+
+`git status` - shows the current changes uncomitted from your local copy.  
+`git log` - shows the last few commits to the project according to the current state of your repository.
+
+These commands only reflect the current state of your local copy of the repository. If someone else on your team has commited on their local machine, you will not see those changes until they `push` the changes to the main repository and then you `pull` the current state of the repository to your local device (but more on that in the next lesson, let's just focus on commiting).
 
 ### Exploring History
 
