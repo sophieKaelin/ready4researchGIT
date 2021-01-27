@@ -45,17 +45,16 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 <!--Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
 <!--Reccomend group work here so no early conflicts emerge-->
 
-[3. Tracking Changes and Exploring History ]()
+[5. Exploring History ]()
 
-[5. Conflicts] ()
+[6. Conflicts] ()
 <!--Force a conflict (TODO: need an idea here)-->
 
+[7. Pull Requests] ()
 <!--Maybe add Pull requests here. First Pull request can just be the README file they updated-->
 
-[6. Ignoring Things]()
-<!--Probably doesn't need a whole section dedicated to it.-->
-
-[7. Other useful Git Commands]()
+[8. Other useful Git Commands]()
+<!--Ignoring Things in here-->
 
 ## Extra Lessons
 <!--For those interested in extending themselves?-->
