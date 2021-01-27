@@ -40,12 +40,12 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 [3. Collaboration and Sharing] ()
 <!--e.g. types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
 
-[4. Commiting and Pushing]()
+[4. Commiting]()
 
 <!--Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
 <!--Reccomend group work here so no early conflicts emerge-->
 
-[5. Exploring History]()
+[5. Pushing and Pulling]()
 
 [6. Conflicts] ()
 <!--Force a conflict (TODO: need an idea here)-->
