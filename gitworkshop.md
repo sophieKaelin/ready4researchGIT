@@ -26,43 +26,25 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 
 <!--TODO: Structure of Git commands something like Git verb blah-->
 <!--Point of reference for common git commands (push, pull etc.)-->
+<!--TODO: Add ensure you have set everything up from yesterday.-->
 
-<!--TODO: Fix Numbers-->
 ## Lessons
 
-[1. Setup ](1.setup.md)
-<!-- Creating account, setting up git on device-->
+[1. Getting Code with Git]()
+   
+  * [Forking (Creating a Copy of the Project)](#forking)
+  * [Collaboration and Sharing](#collaboration-and-sharing)<!--types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
 
-[2. Creating a Copy of the Project](2.creatingACopy.md)
-<!--Maybe add forking here, flows better to fork the repo, then get them to share-->
-<!--Only one person to do this step, but maybe give another basic repo to pracice forking-->
+[2. Changing Code in Git]()  
 
-[3. Collaboration and Sharing](3.collaboration.md)
-<!--e.g. types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
+  * [Commiting](#commiting)
+  * [Pushing](#pushing)
+  * [Pulling](#pushing)
+  * [Conflicts](#conflicts)<!--TODO: Force a conflict-->
 
-[4. Commiting](4.commiting.md)
+[3. Getting your Work Incorporated]()
 
-<!--Intro to conflicts later on. Perhaps they can each push their name to a readme file.-->
-<!--Reccomend group work here so no early conflicts emerge-->
+  * [Pull Requests](#pull-requests)
+  * [Ignoring Things](#ignoring-things)
+  * [Summary](#summary) <!--Which elements will be the most important for remainder of this project-->
 
-[5. Pushing and Pulling](5.pushingPulling.md)
-
-[6. Conflicts](6.conflicts.md)
-<!--Force a conflict (TODO: need an idea here)-->
-
-[7. Pull Requests](7.pullrequest.md)
-<!--Maybe add Pull requests here. First Pull request can just be the README file they updated-->
-
-[8. Other useful Git Commands](8.other.md)
-<!--Ignoring Things in here-->
-
-[9. Summary](9.summary.md)
-<!--Summarise which elements will be most important for the remainder of this project-->
-<!--i.e. steps 4 to 7-->
-
-## Extra Lessons
-<!--For those interested in extending themselves?-->
-
-[?. Creating a Repository]()
-
-[?. Git through a GUI]()
