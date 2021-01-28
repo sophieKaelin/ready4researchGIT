@@ -1,9 +1,11 @@
-#Changing Code in Git
+# Changing Code in Git
 
-##Commiting
+## Commiting
 
-##Pushing
+## Pushing
 
-##Pulling
+## Pulling
 
-##Conflicts
+## Conflicts
+
+***[Next -> Getting Your Work Incorporated](incorporatingcode.md)***

@@ -17,3 +17,5 @@ Before you get started, make sure you have completed yesterdays workshop, especi
 ## Colaboration and Sharing
 
 <!--types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
+
+***[Next -> Changing Code in Git](changingcode.md)***
