@@ -30,21 +30,20 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 
 ## Lessons
 
-[1. Getting Code with Git]()
+[1. Getting Code with Git](gettingcode.md)
    
-  * [Forking (Creating a Copy of the Project)](#forking)
-  * [Collaboration and Sharing](#collaboration-and-sharing)<!--types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
+  * Forking (Creating a Copy of the Project)
+  * Collaboration and Sharing<!--types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
 
-[2. Changing Code in Git]()  
+[2. Changing Code in Git](changingcode.md)  
 
-  * [Commiting](#commiting)
-  * [Pushing](#pushing)
-  * [Pulling](#pushing)
-  * [Conflicts](#conflicts)<!--TODO: Force a conflict-->
+  * Commiting
+  * Pushing
+  * Pulling
+  * Conflicts<!--TODO: Force a conflict-->
 
-[3. Getting your Work Incorporated]()
+[3. Getting your Work Incorporated](incorporatingcode.md)
 
-  * [Pull Requests](#pull-requests)
-  * [Ignoring Things](#ignoring-things)
-  * [Summary](#summary) <!--Which elements will be the most important for remainder of this project-->
-
+  * Pull Requests
+  * Ignoring Things
+  * Summary <!--Which elements will be the most important for remainder of this project-->
