@@ -5,6 +5,9 @@
 2. You pull, you've committed (merge conflict)
 3. You pull, you have no changes or your commits are unrelated-->
 
+<!--TODO: talk about git diff to view changes-->
+<!--TODO: Talk about removing changes-->
+
 ## Commiting
 <!--TODO: Get them to change something meaningful, not just their names-->
 
