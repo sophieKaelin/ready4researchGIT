@@ -4,6 +4,7 @@
 There are various stages when updating code in a repository, and they are easy to mixed up. Before you continue you, it is important to understand some key terminology and the differences between these stages.
 
 <!--TODO: insert picture of the lifecycle (save > add > commit > push)-->
+![Git Workflow Diagram](git-workflow.jpg)
 
 The four different stages are:  
 
