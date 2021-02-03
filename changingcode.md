@@ -7,6 +7,7 @@
 
 <!--TODO: talk about git diff to view changes-->
 <!--TODO: Talk about removing changes-->
+<!--TODO: Reseting repo to hard reset-->
 
 ## Commiting
 <!--TODO: Get them to change something meaningful, not just their names-->
@@ -16,5 +17,6 @@
 ## Pulling
 
 ## Conflicts
+<!-- Force a conflict-->
 
 ***[Next -> Getting Your Work Incorporated](incorporatingcode.md)***

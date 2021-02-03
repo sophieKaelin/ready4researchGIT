@@ -33,14 +33,15 @@ To read more on the pros and cons of Git GUI's and command line, have a read of 
 [1. Getting Code with Git](gettingcode.md)
    
   * Forking (Creating a Copy of the Project)
-  * Collaboration and Sharing<!--types of repos (private, public, starred. Intro multiple user access. intro to conflicts later)-->
+  * Collaboration and Sharing
+  * Cloning & Remote Origins
 
 [2. Changing Code in Git](changingcode.md)  
 
   * Commiting
   * Pushing
   * Pulling
-  * Conflicts<!--TODO: Force a conflict-->
+  * Conflict
 
 [3. Getting your Work Incorporated](incorporatingcode.md)
 
