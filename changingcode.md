@@ -33,6 +33,10 @@ Some helpful stashing commands are:
 * `git stash drop <STASH-NAME>` => deletes a specified stash (use with caution)
 * `git stash clear` => removes all stashes.
 
+### What is a Merge Conflict?
+<!--TODO: Explain what a merge conflict is-->
+<!--TODO: create a diagram to better explain-->
+
 
 ## Commiting
 For this section, you are tasked with finding something in the source code to change. Some suggestions of things you can change include: [background colour](https://processing.org/reference/background_.html), [shape colour](https://processing.org/reference/fill_.html), [circle size](https://processing.org/reference/ellipse_.html), [rectangle size](https://processing.org/reference/rect_.html), [line width](https://processing.org/reference/strokeWeight_.html), [line colour](https://processing.org/reference/stroke_.html).
@@ -52,7 +56,7 @@ For this section, you are tasked with finding something in the source code to ch
 
 You can run the `git add` as many times are you want to one commit. You can also run `git commit` as many times as you like before pushing, it will just create lots of seperate commits.
 
-<!--TODO: Show image of git log where the head is ahead of the origin. Screenshot on desktop-->
+<!--TODO: Show image of git log where the head is ahead of the origin. Screenshot on desktopg-->
 
 
 ## Pushing
@@ -63,14 +67,23 @@ Now that you've commited a change, you will have to push that change back to the
 **NOTE:** As mentioned above, this might have introduced some *Merge Conflicts*. If that is the case, jump down to the **Conflicts** section and have a read over that to see if you can resolve the merge conflict. This can get quite messy, so don't hesitate to call over one of the supervisors to help guide you through it.
 
 ## Pulling
-<!--TODO: talk about fetch vs pull. Fetch checks if there are changes to the repo, but doesn't apply anything. Pulling checks AND applies those changes straight away-->
+As introduced in the first diagram, there are two ways of getting the current code from the remote repository: `git fetch` and `git pull`. To emphasise the difference:  
 
-<!--Merge Conflicts-->
-<!--Stashing-->
-<!--re stashing : 3 scenarios: 
-1. You pull, you have unsaved changes (stash)
-2. You pull, you've committed (merge conflict)
-3. You pull, you have no changes or your commits are unrelated-->
+* **Fetch**: <!--TODO checks if changes to repo, doesn't apply-->
+* **Pull**: <!--TODO checks and applies-->
+
+You will be focusing on pulling changes. This (like pushing) can introduce some conflicts. We will give you some strategies on dealing with common conflicts that may arise, but for any unusual conflicts consult the **Conflicts** section or ask a supervisor for assistance.
+
+There are three main scenarios for when you are pulling from the remote repository. Follow the scenario that best suits your position (hopefully you will be in position **1**):
+
+1. You have no current staged changes, unstaged changes or commits on your local repository.  
+  * <!--TODO: explain standard case-->
+2. You have some commited changes on your local repository  
+  * You may encounter a merge conflict.
+  * <!--TODO: Talk about merge conflicts. depends on conflicting-->
+3. You have some staged or unstaged changes on your local repository  
+  * You will need to stash those changes and then merge it with the new HEAD
+  * <!--TODO: explain stashing-->
 
 ## Conflicts
 <!-- Force a conflict-->
@@ -102,7 +115,7 @@ Depending on the situation, there are various ways you can remove changes or upd
 	* *If you are removing a commit in the middle of your history things will get complicated and dangerous... [THIS](https://www.clock.co.uk/insight/deleting-a-git-commit) article should help but it introduces topics not covered in this workshop. If you are stuck in this situation and are unsure what to do, ask one of the supervisors for help*
 * You have some changes you want to keep, others you don't (this one is a little trickier and involves stashing):  
 `git stash push -p -m "<YOUR-STASH-DESCRIPTION>"`
-  * 
+  * TODO: section incomplete
 
 
 For more on resetting, have a look at [THIS](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset) resource.
