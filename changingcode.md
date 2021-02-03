@@ -35,11 +35,30 @@ Some helpful stashing commands are:
 
 
 ## Commiting
-<!--TODO: Get them to change something meaningful, not just their names-->
-<!--TODO: talk about git diff to view changes-->
+For this section, you are tasked with finding something in the source code to change. Some suggestions of things you can change include: [background colour](https://processing.org/reference/background_.html), [shape colour](https://processing.org/reference/fill_.html), [circle size](https://processing.org/reference/ellipse_.html), [rectangle size](https://processing.org/reference/rect_.html), [line width](https://processing.org/reference/strokeWeight_.html), [line colour](https://processing.org/reference/stroke_.html).
+
+<!--TODO: are they all working in VS or is that just for the non pi people?-->
+1. Open Visual Studio (or another IDE) and navigate to `mq_mini_console/src/studentwork`
+2. Find an element to change and make that change. Ensure your change is successful before you continue (e.g. if you were trying to change the stroke of a line to be thicker, make sure it's actually thicker).
+3. Open a termainal window and navigate to the location of your local clone
+4. Run `git status` to view the files you've changed in the workspace
+5. If you'd like to view the changes you made run `git diff` or `git diff <FILE-NAME`. The file(s) should appear, some with a (+) and others with a (-) depending on if you removed or added that element to the file. It is a good way of checking your file is in the right condition to stage and/or commit.
+6. Move your changes from your workspace to the staging index. There are two ways of doing this:  
+  * *If you want to move all the files to the staging index run* `git add .`
+  * *If you only want to move one file to the staging index run* `git add <FILE-NAME>`
+
+7. Run `git status` again to check all files you wanted to stage have been staged (staged changes are green)
+8. Run `git commit -m "<ADD-YOUR-MESSAGE>"` to move your staged changes to your local repository as a `commit`. Make sure your commit message is meaningful and concise so you can look back and understand what the change was. By convention, commit messages are written as tasks such as *Update the README.md file* or *Complete new character features*.
+
+You can run the `git add` as many times are you want to one commit. You can also run `git commit` as many times as you like before pushing, it will just create lots of seperate commits.
 
 
 ## Pushing
+Now that you've commited a change, you will have to push that change back to the remote repository that everyone can see on Bitbucket. This can come with complications if other users have commited from the same point as you (this will be looked at in a later section **Conflicts**). To avoid this for now, make sure each team is working on different files, or coordinate with other members how both of your code should combine.
+
+1. Run `git push` to push all of your commits on your local repository to the remote repository.
+
+**NOTE:** As mentioned above, this might have introduced some *Merge Conflicts*. If that is the case, jump down to the **Conflicts** section and have a read over that to see if you can resolve the merge conflict. This can get quite messy, so don't hesitate to call over one of the supervisors to help guide you through it.
 
 ## Pulling
 <!--TODO: talk about fetch vs pull. Fetch checks if there are changes to the repo, but doesn't apply anything. Pulling checks AND applies those changes straight away-->
@@ -53,6 +72,8 @@ Some helpful stashing commands are:
 
 ## Conflicts
 <!-- Force a conflict-->
+<!-- When there is a merge conflict, work with the person you have conflicted with to achieve the best outcome for both commits-->
+<!--TODO: Talk about avoiding bad conflicts (pulling regularly, always pulling before making a commit and resolving the conflict yourself) -->
 
 <!--TODO: Maybe add a section on playing around with history?
 https://stackoverflow.com/questions/10230469/temporarily-switch-working-copy-to-a-specific-git-commit/10230489#:~:text=First%2C%20use%20git%20log%20to,copy%20to%20a%20specific%20commit.-->
