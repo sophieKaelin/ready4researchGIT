@@ -52,6 +52,8 @@ For this section, you are tasked with finding something in the source code to ch
 
 You can run the `git add` as many times are you want to one commit. You can also run `git commit` as many times as you like before pushing, it will just create lots of seperate commits.
 
+<!--TODO: Show image of git log where the head is ahead of the origin. Screenshot on desktop-->
+
 
 ## Pushing
 Now that you've commited a change, you will have to push that change back to the remote repository that everyone can see on Bitbucket. This can come with complications if other users have commited from the same point as you (this will be looked at in a later section **Conflicts**). To avoid this for now, make sure each team is working on different files, or coordinate with other members how both of your code should combine.
