@@ -22,7 +22,6 @@ A positive aspect of sites like Github and Bitbucket is to allow for collaborati
 <!--TODO: Visual representation of cloning-->
 
 ### Before you get started ...
-<!--TODO: Check with cece whether this lines up with her sections-->
 Before you get started, make sure you have completed yesterdays workshop, as well as the following tasks:  
 
 1. Made a [Bitbucket](https://bitbucket.org/) account
@@ -33,7 +32,8 @@ Before you get started, make sure you have completed yesterdays workshop, as wel
   1. Open a terminal window either by clicking on the icon or pressing `Ctrl + Alt + T`
   2. Run `git config --global user.name "YOUR-BITBUCKET-USERNAME"`
   3. Run `git config --global user.email "YOUR-BITBUCKET-EMAIL"`
-  4. Run `git config --list` to view your config details to confirm you have correctly set your name and email. <!--TODO: Sreenshot-->
+  4. Run `git config --list` to view your config details to confirm you have correctly set your name and email. <!--TODO: Screenshot-->
+  5. If you are working on a PI, run `git config --global core.editor nano` to set your default/prefered editing environment to Nano (you would have looked at that in the Day 1 workshop)
   **NOTE**: Make sure the username and email you enter is the same as the details you used to create your bitbucket account.
   
   <!--TODO: explain that if they made any changes playing around in yesterdays workshop, that they will appear in their working tree. If they want to keep those changes, do nothing. If they want to clear them, perform a git clear to remove all (or maybe reset) and then a git restore <FILE> to restore certain files-->
