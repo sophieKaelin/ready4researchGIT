@@ -21,8 +21,12 @@ You should only stage changes when you are *really* happy with them, and think t
 
 If you want to see which files have staged or unstaged changes, use the `git status` command to view changes to your working tree. Files that appear in **red** are unstaged, files that appear in **green** are staged. A file can have both staged and unstaged changes if you staged the changes at one point, then continued working on the file.
 
+<!--TODO: Add screenshots of this -> alot clearer than saying red and green-->
+
 ### Stashing
 There may be times when you have some outstanding staged/unstaged changes you aren't ready to commit, but don't want to throw away. That is where `git stash` comes in handy. `git stash` will take the current state of your current uncommitted changes and save them in a temporary "stash" away from your working tree so that you can work on something different. This is a helpful command when  you are wanting to commit changes, but there have been other changes commited by another user that might cause a conflict. 
+
+<!--TODO: Diagram of stashing-->
 
 Some helpful stashing commands are:  
 
@@ -34,45 +38,70 @@ Some helpful stashing commands are:
 * `git stash clear` => removes all stashes.
 
 ### What is a Merge Conflict?
+<!--TODO: Maybe I should move this down to conflicts-->
 <!--TODO: Explain what a merge conflict is-->
 <!--TODO: create a diagram to better explain-->
+<!--TODO: Diagram of merge conflict-->
+<!-- When there is a merge conflict, work with the person you have conflicted with to achieve the best outcome for both commits-->
+<!--Video game analogy to explain merge conflict from a high level -- you have save data on the cloud from one gaming console, you switch to another game console and make some progress on a previous save. The online server then gets confused... which one is the accurate one?-->
+
+### Finding something to change
+It can be difficult to find an element of the program to change when you aren't sure what you're looking for. For this section, you are tasked with finding something in the source code to change. Some suggestions of things you can change include: [background colour](https://processing.org/reference/background_.html), [shape colour](https://processing.org/reference/fill_.html), [circle size](https://processing.org/reference/ellipse_.html), [rectangle size](https://processing.org/reference/rect_.html), [line width](https://processing.org/reference/strokeWeight_.html), [line colour](https://processing.org/reference/stroke_.html).
+
+<!--TODO: Notes on finding a change (look at cece's instructions on opening a file in nano vs opening a file in VS code-->
+<!--TODO: A Reminder on running the code before making a commit. Overview on compiling and running code (cece also already talked about this)-->
+
+<!--TODO: Seperate instructions for Nano and VS. Explain that Pi will work on Nano, other will use VS-->
+<!--1. Open Visual Studio (or another IDE) and navigate to `mq_mini_console/src/studentwork`
+2. Find an element to change and make that change. Ensure your change is successful before you continue (e.g. if you were trying to change the stroke of a line to be thicker, make sure it's actually thicker).-->
 
 
 ## Commiting
-For this section, you are tasked with finding something in the source code to change. Some suggestions of things you can change include: [background colour](https://processing.org/reference/background_.html), [shape colour](https://processing.org/reference/fill_.html), [circle size](https://processing.org/reference/ellipse_.html), [rectangle size](https://processing.org/reference/rect_.html), [line width](https://processing.org/reference/strokeWeight_.html), [line colour](https://processing.org/reference/stroke_.html).
-
-<!--TODO: are they all working in VS or is that just for the non pi people?-->
-1. Open Visual Studio (or another IDE) and navigate to `mq_mini_console/src/studentwork`
-2. Find an element to change and make that change. Ensure your change is successful before you continue (e.g. if you were trying to change the stroke of a line to be thicker, make sure it's actually thicker).
+<!--TODO: add intro for commiting-->
+<!--TODO: HEAD vs ORIGIN labels on the log-->
+<!--TODO: Fix numbering-->
 3. Open a termainal window and navigate to the location of your local clone
-4. Run `git status` to view the files you've changed in the workspace
-5. If you'd like to view the changes you made run `git diff` or `git diff <FILE-NAME`. The file(s) should appear, some with a (+) and others with a (-) depending on if you removed or added that element to the file. It is a good way of checking your file is in the right condition to stage and/or commit.
+4. Run `git status` to view the files you've changed in the workspace <!--TODO: SC-->
+5. If you'd like to view the changes you made run `git diff` or `git diff <FILE-NAME`. The file(s) should appear, some with a (+) and others with a (-) depending on if you removed or added that element to the file. It is a good way of checking your file is in the right condition to stage and/or commit. <!--TODO: SC-->
 6. Move your changes from your workspace to the staging index. There are two ways of doing this:  
   * *If you want to move all the files to the staging index run* `git add .`
   * *If you only want to move one file to the staging index run* `git add <FILE-NAME>`
+  <!--TODO: SC of both-->
 
-7. Run `git status` again to check all files you wanted to stage have been staged (staged changes are green)
-8. Run `git commit -m "<ADD-YOUR-MESSAGE>"` to move your staged changes to your local repository as a `commit`. Make sure your commit message is meaningful and concise so you can look back and understand what the change was. By convention, commit messages are written as tasks such as *Update the README.md file* or *Complete new character features*.
+7. Run `git status` again to check all files you wanted to stage have been staged (staged changes are green) <!--TODO: SC-->
+8. Run `git commit -m "<ADD-YOUR-MESSAGE>"` to move your staged changes to your local repository as a `commit`. Make sure your commit message is meaningful and concise so you can look back and understand what the change was. By convention, commit messages are written as tasks such as *Update the README.md file* or *Complete new character features*. <!--TODO: SC of good commit message(s)-->
+9. Run `git status` and you should see your staged changes section should be clear (all staged changes were included in the commit) <!--TODO: SC-->
+10. Run `git log` and the top commit should be your most recent one <!--TODO: SC-->
 
 You can run the `git add` as many times are you want to one commit. You can also run `git commit` as many times as you like before pushing, it will just create lots of seperate commits.
 
-<!--TODO: Show image of git log where the head is ahead of the origin. Screenshot on desktopg-->
+<!--TODO: Show image of git log where the head is ahead of the origin. Screenshot on desktop-->
+
+<!--TODO: If you've made lots of commits and want to view them you can view the log. If you want to view just the commits you have made and not pushed use `git log origin/master..HEAD`. Maybe add some screenshots for this-->
 
 
 ## Pushing
 Now that you've commited a change, you will have to push that change back to the remote repository that everyone can see on Bitbucket. This can come with complications if other users have commited from the same point as you (this will be looked at in a later section **Conflicts**). To avoid this for now, make sure each team is working on different files, or coordinate with other members how both of your code should combine.
 
-1. Run `git push` to push all of your commits on your local repository to the remote repository.
+<!--TODO: add diagram of origin and head nodes moving (x2)-->
+
+1. Run `git log`. In this particular case, you should see that your head node is pointing to your most recent commit, but origin may be pointing a little later. Origin refers to what the remote repository thinks is the HEAD node. Once you push your commits (if there are no merge conflicts), the remote repository should recognise the HEAD as your most recent commit. <!--TODO: SC showing origin vs head-->
+<!--TODO: maybe move above explanation out. TMI-->
+2. Run `git push` to push all of your commits on your local repository to the remote repository.
+3. Run `git log` and the origin should match up to the 
+<!--TODO: SC showing head and origin are the same-->
 
 **NOTE:** As mentioned above, this might have introduced some *Merge Conflicts*. If that is the case, jump down to the **Conflicts** section and have a read over that to see if you can resolve the merge conflict. This can get quite messy, so don't hesitate to call over one of the supervisors to help guide you through it.
 
 ## Pulling
 As introduced in the first diagram, there are two ways of getting the current code from the remote repository: `git fetch` and `git pull`. To emphasise the difference:  
 
-* **Fetch**: <!--TODO checks if changes to repo, doesn't apply-->
-* **Pull**: <!--TODO checks and applies-->
+![Fetch VS Pull](fetch-vs-pull.jpg)
 
-You will be focusing on pulling changes. This (like pushing) can introduce some conflicts. We will give you some strategies on dealing with common conflicts that may arise, but for any unusual conflicts consult the **Conflicts** section or ask a supervisor for assistance.
+* **Fetch**: Only retrieves the most recent changes applied to the remote repository, and doesn't apply them. These changes are only applied when you run the `git update` command.
+* **Pull**: Retrieves AND applies the code all in one.
+
+You will just be **pulling** changes. This (like pushing) can introduce some conflicts. We will give you some strategies on dealing with common conflicts that may arise, but for any unusual conflicts consult the **Conflicts** section or ask a supervisor for assistance.
 
 There are three main scenarios for when you are pulling from the remote repository. Follow the scenario that best suits your position (hopefully you will be in position **1**):
 
@@ -86,12 +115,20 @@ There are three main scenarios for when you are pulling from the remote reposito
   * <!--TODO: explain stashing-->
 
 ## Conflicts
-<!-- Force a conflict-->
-<!-- When there is a merge conflict, work with the person you have conflicted with to achieve the best outcome for both commits-->
-<!--TODO: Talk about avoiding bad conflicts (pulling regularly, always pulling before making a commit and resolving the conflict yourself) -->
+We have mentioned conflicts throughout this workshop, an perhaps you have already encountered some of your own. Some conflicts are pretty straight forward to resolve, while others are more unique. Becuase each case is unique, if you encounter a strange looking conflict alert one of the supervisors and they will help you out.
 
-<!--TODO: Maybe add a section on playing around with history?
-https://stackoverflow.com/questions/10230469/temporarily-switch-working-copy-to-a-specific-git-commit/10230489#:~:text=First%2C%20use%20git%20log%20to,copy%20to%20a%20specific%20commit.-->
+### Good habits for avoiding conflicts
+There are some habits that are good to form early in order to avoid nasty conflicts:  
+
+* **Pull Regularly**: If you don't work on a group project for a month, week or even a day, there will surely have been many commits made by other group members. It is a good idea to pull regularly to ensure you are working on the most recent version.
+* **Pull before Commiting**: Before making a commit, you need to pull the most recent version of of the project and deal with any merge conflicts before you <!--TODO: Make sure this is true-->
+* **Communicate**: If you have many group members working on a project, make sure you are all aware of what each of you are working on. That way, if two of you are working on the same feature you are aware there is potential for conflicts when you merge your code together. That way you can work through them together to ensure the end code works for both of your introduced changes.
+* <!--TODO: Add other good habits. Maybe research some articles-->
+
+***
+
+To learn more about conflicts, have a look at [THIS]() video. <!--TODO: Insert Carls Video link-->
+
 
 ## Extra Notes
 ### Removing Changes
@@ -115,7 +152,7 @@ Depending on the situation, there are various ways you can remove changes or upd
 	* *If you are removing a commit in the middle of your history things will get complicated and dangerous... [THIS](https://www.clock.co.uk/insight/deleting-a-git-commit) article should help but it introduces topics not covered in this workshop. If you are stuck in this situation and are unsure what to do, ask one of the supervisors for help*
 * You have some changes you want to keep, others you don't (this one is a little trickier and involves stashing):  
 `git stash push -p -m "<YOUR-STASH-DESCRIPTION>"`
-  * TODO: section incomplete
+  * <!--TODO: section incomplete-->
 
 
 For more on resetting, have a look at [THIS](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset) resource.
