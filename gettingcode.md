@@ -1,14 +1,5 @@
 # Getting Code With Git
 
-### Before you get started ...
-<!--TODO: Check with cece whether this lines up with her sections-->
-Before you get started, make sure you have completed yesterdays workshop, especially the following tasks:  
-
-1. Made a Bitbucket account <!--TODO: Add Bitbucket Link-->
-2. Cloned the mini console repository <!--TODO: Add console Link-->
-3. Installed Git (only on non-raspbian machines)
-4. Told Git who you are
-
 ### Intro
 <!--TODO: Introduction (with pictures) on getting code from git.-->
 
@@ -28,15 +19,23 @@ The appropriateness of these methods depends on the project you are working on. 
 ### What is Cloning?
 A positive aspect of sites like Github and Bitbucket is to allow for collaboration on projects. Cloning a repository creates a remote access point to viewing and alter the source code in your repository. A copy of the source code is downloaded (cloned) to your device that you can work on. Then, when you have completed a feature, you can push your changes back to the repository (but more on that later). Cloning allows you to work on a feature without impacting your repository - because the changes you make to the source code are only applied to your local device and only updates the repository when you tell it to (pushing).
 
-### Types of Repositories
-<!--TODO: Quick note on the type of repositories and whether or not you can contribute or not--> 
-<!--TODO: Intro conflicts-->
+### Before you get started ...
+<!--TODO: Check with cece whether this lines up with her sections-->
+Before you get started, make sure you have completed yesterdays workshop, especially the following tasks:  
+
+1. Made a [Bitbucket](https://bitbucket.org/) account
+2. Cloned the [mini console repository](https://bitbucket.org/mqcomputingdept/mq_mini_console/src/master/) (hopefully you did this in the Day 1 workshop)
+3. Installed Git  <!--TODO: Cece might have done this-->
+  * Git is installed by default in Raspbian. If you are using different operating systems (like Mac OS, Windows or Linux) you need to install Git yourself. Instructions on how to do so can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+4. Told Git who you are   <!--TODO: Cece might have done this-->
+  1. Open a terminal window either by clicking on the icon or pressing `Ctrl + Alt + T`
+  2. Run `git config --global user.name "YOUR-BITBUCKET-USERNAME"`
+  3. Run `git config --global user.email "YOUR-BITBUCKET-EMAIL"`  
+  **NOTE**: Make sure the username and email you enter is the same as the details you used to create your bitbucket account.
 
 ## Forking
-<!--TODO: Change Style/Numbering-->
-Because many teams are going to be working on the mini console, you will be creating a **Fork** of the project for your individual team to work on. When you have implemented something that works, you can submit a Pull Request to merge your changes with the main project repository (*more on that later*).
 
-<!--TODO: More Info on forking and links-->
+Because many teams are going to be working on the mini console, you will be creating a **Fork** of the project for your individual team to work on. When you have implemented something that works, you can submit a Pull Request to merge your changes with the main project repository (*more on that later*).
 
 1. Nominate one group members account to host the forked repository. You will only need to fork it once, and then everyone in your group can work on the same copy.
 2. Head to the location of the mini console on Bitbucket [https://bitbucket.org/mqcomputingdept/mq_mini_console/src/master/](https://bitbucket.org/mqcomputingdept/mq_mini_console/src/master/).
@@ -58,7 +57,6 @@ If you are **not** the group member who hosts the repository you will need to:
 **Before moving on to the next step, make sure that everyone in your group has accepted their invitation, otherwise they will not be able to make changes to the repository.**
 
 ## Cloning
-<!--TODO: Ensure Cece is actually doing this. Otherwise we just include original 3.2 and add a small note on changing remote origin-->
 
 You should have cloned the main repository in yesterdays lesson. But **remember** - that copy is pointing to the main repository which you don't have write access to. So we need to have our clone point to the new `forked` repository you just set up.
 
