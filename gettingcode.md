@@ -35,6 +35,8 @@ Before you get started, make sure you have completed yesterdays workshop, as wel
   3. Run `git config --global user.email "YOUR-BITBUCKET-EMAIL"`
   4. Run `git config --list` to view your config details to confirm you have correctly set your name and email. <!--TODO: Sreenshot-->
   **NOTE**: Make sure the username and email you enter is the same as the details you used to create your bitbucket account.
+  
+  <!--TODO: explain that if they made any changes playing around in yesterdays workshop, that they will appear in their working tree. If they want to keep those changes, do nothing. If they want to clear them, perform a git clear to remove all (or maybe reset) and then a git restore <FILE> to restore certain files-->
 
 ## Forking
 
