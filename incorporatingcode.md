@@ -7,4 +7,4 @@ At the moment, all your work is sitting on your forked repository. In incorporat
 <!--TODO: Vague instructions, and then video with Matt. Cece and I will make a pull request with a conflict.-->
 
 <!--Process used for open-source projects. If they want to continue to work on projects like this, they could find something on a site like https://www.firsttimersonly.com/ where they can clone a repo, branch, make changes, push the branch and then create a PR. The communities on the websites on that page are friendly and tag issues for beginners to help get them started on projects-->
-## Summary
+## Summary. 
