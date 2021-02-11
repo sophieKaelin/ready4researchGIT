@@ -1,16 +1,16 @@
 # Changing Code in Git
 
 ### Intro
-There are various stages when updating code in a repository, and they are easy to mix up. Before you continue you, it is important to understand some key terminology and the differences between these stages.
+There are various stages when updating code in a repository, and they are easy to mix up. Before you continue, it is important to understand some key terminology and the differences between these stages.
 
 <kbd>![Git Workflow Diagram](diagrams/git-workflow.jpg)</kbd>
 
 The four different stages are:  
 
-* **The Workspace**: Where you update the files in the editor of choice. You are used to just working in a workspace and saving files onto your device. Also referred to as your "working tree". The changes you make in this stage are referred to as `unstaged changes`
-* **The Staging Index**: This is where you `add` changes that you are happy with, and are prepared to have incorporated in your repository. The changes you add to this staged are referred to `staged changes`
-* **The Local Repository**: When you have completed a feature, or completed a certain task, your next step is to `commit` that change to your local repository. This is referring to the local copy of the repository you have on your device. A commit should have a meaningful message so that users can look back in their commit history and understand what each commit accomplished.
-* **The Remote Repository**: When you want to move your local changes up to the main repository, you `push` these changes to the Remote Repository. This stage can come with issues (called `merge conflicts`) if other users have made changes at the same time as you and they conflict.
+* **The Workspace**: Where you update the files in Visual Studio Code or Nano (there are other options, but this is what we are using in the workshop). You are (most likely) used to just working in a workspace and saving files onto your device. Also referred to as your "working tree". The changes you make in this stage are referred to as `unstaged changes`
+* **The Staging Index**: This is where you `add` changes that you are happy with, and are prepared to have incorporated in your repository. The changes you add to this stage are referred to as `staged changes`
+* **The Local Repository**: When you have completed a feature, or completed a certain task, your next step is to `commit` those staged changes to your local repository. This is referring to the local copy of the repository you have on your device. A commit should have a meaningful message so that users can look back in their commit history and understand what each commit accomplished.
+* **The Remote Repository**: When you want to move your local changes up to the repository, you `push` these changes to the Remote Repository. This stage can come with issues (called `merge conflicts`) if other users have made changes to the same section you have.
 
 The arrows in the diagram show the commands you will use to move changes between the stages.
 
@@ -24,26 +24,27 @@ If you want to see which files have staged or unstaged changes, use the `git sta
 <kbd>![Staged vs Unstaged Screenshot](screenshots/un-staged.png)</kbd>
 
 ### Stashing
-There may be times when you have some outstanding staged/unstaged changes you aren't ready to commit, but don't want to throw away. That is where `git stash` comes in handy. `git stash` will take the current state of your current uncommitted changes and save them in a temporary "stash" away from your working tree so that you can work on something different. This is a helpful command when  you are wanting to commit changes, but there have been other changes committed by another user that might cause a conflict. 
-
 <kbd>![Stashing Diagram](diagrams/git-stash.png)</kbd>
+There may be times when you have some outstanding staged/unstaged changes you aren't ready to commit, but don't want to throw away. That is where `git stash` comes in handy. `git stash` will take the current state of your current uncommitted changes and save them in a temporary "stash" away from your working tree so that you can work on something different. This is a helpful command when  you are wanting to pull changes before committing your own.
 
 Some helpful stashing commands are:  
 
 * `git stash save "<ADD-A-NOTE>"` => stashes your current staged and unstaged changes. Write a note for yourself so you remember what is in the stash.
 * `git stash push -p -m "<YOUR-STASH-DESCRIPTION>"` => allows you to choose which files to stash.
-* `git stash list` => will show you a list of current stashes/
-* `git stash pop <STASH-NAME>` => brings your stashed changes back and removes them from the stash.
+* `git stash list` => will show you a list of current stashes
+* `git stash pop <STASH-NAME>` => brings your stashed changes back to your working tree/ staging index and removes them from the stash.
 * `git stash drop <STASH-NAME>` => deletes a specified stash (use with caution)
 * `git stash clear` => removes all stashes.
+
+A stash name takes the form of : `stash@{<NUMBER>}`
 
 ### What is a Merge Conflict?
 
 <kbd>![Merge Conflict Example Diagram](diagrams/merge-conflict.png)</kbd>
 
-A merge conflict will arise when multiple people update the same file and git is unable to decide which updates to keep when they conflict. An example of this is shown in the diagram above. What if one person deleted a function, and another person made updates that depended on that function? When all those changes are pushed to the remote repository, the changes will need to be merged. And when they can't be merged, a conflict arises.
+A merge conflict will arise when multiple people update the same file and git is unable to decide which update to keep when they conflict. An example of this is shown in the diagram above. What if one person deleted a function, and another person made updates that depended on that function? When all those changes are pushed to the remote repository, the changes will need to be merged. And when they can't be merged, a conflict arises.
 
-Another (real life) example can be seen in video games. Say you made progress on a game and your data saved to the cloud. Then you switched to another console and made some progress on the previous save. When both those saves are made, the game server won't now which is the correct game save?
+Another (real life) example can be seen in video games. Say you made progress on a game and your data saved to the cloud. Then you switched to another console and made some progress on the previous save. When both those saves are made, the game server won't know which is the correct game save.
 
 When you experience a merge conflict, it is a good idea to work with the other person whose changes have conflicted with yours, to ensure you both come up with a resolution that works for both your updates.
 
@@ -54,9 +55,7 @@ It can be difficult to find an element of the program to change when you aren't 
 
 Review the notes from Day 1 on how to access/edit files through either *Visual Studio* or *Nano* (particularly how to compile and run the program). One filepath that might be worth investigating is `mq_mini_console/src/studentwork`.
 
-**NOTE:** It is important that you check your change is successful before you continue (make a commit). So if your aim was to make a line thicker, make sure the line is ACTUALLY thicker. You only want to update your repository when you have made a positive change and not introduced any bugs.
-
-**ANOTHER NOTE:** You may have made some changes to the repository earlier. If those aren't changes you want to keep for this next step. Have a look at the heading "Staged vs Unstaged" for instructions on clearing changes.
+**NOTE:** It is important that you check your change is successful before you continue/make a commit. So if your aim was to make a line thicker, make sure the line is ACTUALLY thicker. You only want to update your repository when you have made a positive change and not introduced any bugs.
 
 <!--TODO: Maybe a short video on finding changes and running the code?-->
 
@@ -70,7 +69,7 @@ Commiting is the stage when you are ready to merge staged changes into your loca
 2. Run `git status` to view the files you've changed in the workspace.  
 <kbd>![git status screenshot](screenshots/commit-2.png)</kbd>
 
-3. If you'd like to view the changes you made, run `git diff` or `git diff <FILE-NAME`. The file(s) should appear, some with a (+) and others with a (-) depending on if you removed or added that element to the file. It is a good way of checking your file is in the right condition to stage and/or commit.  
+3. If you'd like to view the changes you made to that file, run `git diff <FILE-NAME>`. The file should appear with some (+) and (-) symbols depending on whether you removed or added that element to the file. It is a good way of checking your file is in the right condition to stage and/or commit.  
 <kbd>![git diff screenshot](screenshots/commit-3.png)</kbd>
 
 4. Stage your changes - move them from your workspace to the staging index. There are two ways of doing this:  
@@ -80,10 +79,10 @@ Commiting is the stage when you are ready to merge staged changes into your loca
 <kbd>![git add screenshot](screenshots/commit-4.2.png)</kbd>
 
 5. Run `git status` again to check all files you wanted to stage have been staged (staged changes are green)
-6. Run `git commit -m "<ADD-YOUR-MESSAGE>"` to move your staged changes to your local repository as a `commit`. Make sure your commit message is meaningful and concise so you can look back and understand what the change was. By convention, commit messages are written as tasks such as *Update the README.md file* or *Complete new character features*.  
+6. Run `git commit -m "<ADD-YOUR-MESSAGE>"` to move your staged changes to your local repository as a `commit`. Make sure your commit message is meaningful and concise so you can look back and understand what the change was. By convention, commit messages are written as tasks such as "*Update the README.md file*" or "*Complete new character features*".  
 <kbd>![git commit screenshot](screenshots/commit-6.png)</kbd>
 
-7. Run `git status` and you should see your staged changes section should be clear (all staged changes were included in the commit).  
+7. Run `git status` and you should see your staged changes section is clear (all staged changes were included in the commit).  
 <kbd>![git status2 screenshot](screenshots/commit-7.png)</kbd>
 
 8. Run `git log` and the top commit should be your most recent one. The `origin/master, origin/HEAD` label represents what commit the **remote** repository recognises at the most recent commit. The `HEAD -> master` label represents what commit the **local** repository recognises as the most recent commit. This screenshot is accurate, because we have not yet pushed changes from the local to the remote repository.  
@@ -91,13 +90,12 @@ Commiting is the stage when you are ready to merge staged changes into your loca
 
 You can run the `git add` as many times as you want to one commit. You can also run `git commit` as many times as you like before pushing, it will just create lots of separate commits.
 
-**NOTE:** If you've made a lot of commits and want to view them you can view the log. If you want to view just the commits you have made and not pushed use `git log origin/master..HEAD`
+**NOTE:** If you have made a lot of commits and want to view a log of JUST those commits you have made and not pushed, run `git log origin/master..HEAD`
 <kbd>![git log2 screenshot](screenshots/just-commits.png)</kbd>
 
 
 ## Pushing
-Now that you've committed a change, you will have to push that change back to the remote repository that everyone can see on Bitbucket. This can come with complications if other users have commited from the same point as you (this will be looked at in a later section **Conflicts**). To avoid this for now, make sure each team is working on different files, or coordinate with other members how both of your code should combine.
-
+Now that you've committed a change, you will have to push that change back to the remote repository that everyone can see on Bitbucket. This can come with complications if other users have commited since the last time you pulled (this will be looked at in a later section **Conflicts**). To avoid this for now, make sure each team is working on different files, or coordinate with other members how both of your code should combine.
 
 1. Run `git log`. In this particular case, you should see that your head node is pointing to your most recent commit, but origin may be pointing a little later. Origin refers to what the remote repository thinks is the HEAD node. Once you push your commits (if there are no merge conflicts), the remote repository should recognise the HEAD as your most recent commit.  
 <kbd>![git log3 screenshot](screenshots/push-1.png)</kbd>  
@@ -106,7 +104,7 @@ Now that you've committed a change, you will have to push that change back to th
 2. Run `git push` to push all of your commits on your local repository to the remote repository.  
 <kbd>![git push screenshot](screenshots/push-2.png)</kbd>  
 
-3. Run `git log` and the origin should match up to the head.  
+3. Run `git log` and the origin should match up with the head.  
 <kbd>![git log4 screenshot](screenshots/push-3.png)</kbd>  
 
 **NOTE:** As mentioned above, this might have introduced some *Merge Conflicts*. If that is the case, jump down to the **Conflicts** section and have a read over that to see if you can resolve the merge conflict. This can get quite messy, so don't hesitate to call over one of the supervisors to help guide you through it.
@@ -120,9 +118,11 @@ As introduced in the first diagram, there are two ways of getting the current co
 * **Fetch**: Only retrieves the most recent changes applied to the remote repository, and doesn't apply them. These changes are only applied when you run the `git update` command.
 * **Pull**: Retrieves AND applies the code all in one.
 
-You will just be **pulling** changes. This (like pushing) can introduce some conflicts. We will give you some strategies on dealing with common conflicts that may arise, but for any unusual conflicts consult the **Conflicts** section or ask a supervisor for assistance.
+You will just be **pulling** changes. This (like pushing) can introduce some conflicts.
 
 ### General Merge Instructions
+Below are some generic instructions on how to merge your commits with the remote repository when you are pulling:
+
 1. `git pull`. If there is a merge conflict, a similar error will appear  
 <kbd>![Merge Conflict1](screenshots/pull-2.1.png)</kbd>
   
@@ -133,7 +133,7 @@ You will just be **pulling** changes. This (like pushing) can introduce some con
 `<<<<<<< HEAD`  
 `=======`  
 `>>>>>>> <COMMIT-HASH>`  
-Each of these shows the conflicts/differences between the commits. You will need to merge these sections by hand, and then remove the lines in the list above once you've come up with a successful merge.  
+Each of these shows the conflicts/differences between the commits which need to be resolved. You will need to merge these sections by hand, and then remove the lines in the list above once you've come up with a successful merge.  
 <kbd>![Merge Conflict3](screenshots/pull-2.5.png)</kbd> 
  
 4. Once you've done this, treat the change as a normal commit:  
@@ -141,7 +141,7 @@ Each of these shows the conflicts/differences between the commits. You will need
 <kbd>![Merge Conflict4](screenshots/pull-2.6.png)</kbd>
 <kbd>![Merge Conflict5](screenshots/pull-2.7.png)</kbd>
 
-There are three main scenarios for when you are pulling from the remote repository. Follow the scenario that best suits your position (hopefully you will be in position **1**):
+There are three main scenarios for when you are pulling from the remote repository. Follow the scenario that best suits your situation (hopefully you will be in position **1**):
 
 1. You have no current staged changes, unstaged changes or commits on your local repository.  
   * `git pull` (ignore the warnings)
@@ -162,13 +162,9 @@ We have mentioned conflicts throughout this workshop, and perhaps you have alrea
 ### Good habits for avoiding conflicts
 There are some habits that are good to form early in order to avoid nasty conflicts:  
 
-* **Pull Regularly**: If you don't work on a group project for a month, week or even a day, there will surely have been many commits made by other group members. It is a good idea to pull regularly to ensure you are working on the most recent version.
-* **Pull before Commiting**: Before making a commit, you need to pull the most recent version of of the project and deal with any merge conflicts before you <!--TODO: Make sure this is true-->
-* **Communicate**: If you have many group members working on a project, make sure you are all aware of what each of you are working on. That way, if two of you are working on the same feature you are aware there is potential for conflicts when you merge your code together. That way you can work through them together to ensure the end code works for both of your introduced changes.
-
-***
-
-For a more visual representation of conflicts, have a look at [THIS]() video (we haven't covered branching in this workshop, so don't stress too much about that in the video. Minutes 19-22 focus on conflicts, and 0-18 provide some context) <!--TODO: Insert Carls Video link-->
+* **Pull Regularly**: If you don't work on an active group project for a day or few, there will likely have been many commits made by other group members. It is a good idea to pull regularly to ensure you are working on the most recent version, and the conflicts you encounter aren't as severe.
+* **Pull before Commiting**: Before making a commit, you should pull the most recent version of the project and deal with any merge conflicts before you continue.
+* **Communicate**: If you have many group members working on a project, make sure you are all aware of what each of you are working on. That way, if two of you are working on the same feature you are aware there is potential for conflict when you merge your code together. That way you can work through them together to ensure the end code works for both of your introduced changes.
 
 
 ## Extra Notes
@@ -194,7 +190,7 @@ Depending on the situation, there are various ways you can remove changes or upd
 `git stash push -p -m "<YOUR-STASH-DESCRIPTION>"`
   * This lets you choose files/changes you want to keep
   * use the `Y` and `N` keys to choose to stash a change (`YES`) or not to stash a change (`NO`).
-  * Once you are done, you can remove all changes with a `git restore` and `git restore --staged` variation
+  * Once you are done, you can remove all changes with a `git restore` and `git restore --staged` variation. Then you can pop your stash back onto your workspace.
 
 
 For more on resetting, have a look at [THIS](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset) resource.
