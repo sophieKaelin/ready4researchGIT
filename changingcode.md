@@ -57,7 +57,9 @@ Review the notes from Day 1 on how to access/edit files through either *Visual S
 
 **NOTE:** It is important that you check your change is successful before you continue/make a commit. So if your aim was to make a line thicker, make sure the line is ACTUALLY thicker. You only want to update your repository when you have made a positive change and not introduced any bugs.
 
-<!--TODO: Maybe a short video on finding changes and running the code?-->
+The following video shows an example of how to find, make and commit a change
+
+[![Making Changes Video](http://img.youtube.com/vi/b1bi4H0e_KA/0.jpg)](https://youtu.be/b1bi4H0e_KA)
 
 
 ## Committing
