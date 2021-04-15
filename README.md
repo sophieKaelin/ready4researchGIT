@@ -1,6 +1,6 @@
 # Version Control with Git
 
-*Disclaimer: This content was created for ![Macquarie Universities Department of Computing Ready for Research Workshop](https://software-technology.herokuapp.com/hacking/index.html)*
+*Disclaimer: This content was created for [Macquarie Universities Department of Computing Ready for Research Workshop](https://software-technology.herokuapp.com/hacking/index.html)*
 
 ![Git Linked List Example](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gtjD0wp0QJuTGvA0pjHgFYgWPmzb92tu-w&usqp=CAU)
 
