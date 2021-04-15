@@ -1,4 +1,4 @@
-# Day 2 - Version Control with Git
+Version Control with Git
 
 ![Git Linked List Example](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-gtjD0wp0QJuTGvA0pjHgFYgWPmzb92tu-w&usqp=CAU)
 
